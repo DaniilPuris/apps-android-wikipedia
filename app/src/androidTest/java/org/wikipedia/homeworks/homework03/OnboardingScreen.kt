@@ -8,7 +8,7 @@ import com.google.android.material.tabs.TabLayout
 
 val fragmentContainer = listOf(
     FrameLayout::class.java,
-    "fragment_container",
+    "fragment_container"
 )
 
 val scrollViewContainer = listOf(
