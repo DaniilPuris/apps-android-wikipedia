@@ -9,7 +9,7 @@ import org.wikipedia.R
 import org.wikipedia.feed.view.FeedView
 
 object OnboardingScreen : KScreen<OnboardingScreen>() {
-    override val layoutId = R.layout.fragment_onboarding_pager
+    override val layoutId = null
     override val viewClass = null
 
     val slider = KViewPager2(

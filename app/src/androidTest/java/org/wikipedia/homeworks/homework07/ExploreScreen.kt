@@ -5,6 +5,7 @@ import io.github.kakaocup.kakao.image.KImageView
 import io.github.kakaocup.kakao.recycler.KRecyclerView
 import org.wikipedia.R
 import org.wikipedia.feed.view.FeedView
+import org.wikipedia.homeworks.homework09.InTheNewsCardViewItem
 
 object ExploreScreen : KScreen<ExploreScreen>() {
     override val layoutId = R.layout.fragment_feed
@@ -23,8 +24,8 @@ object ExploreScreen : KScreen<ExploreScreen>() {
             itemType(::AnnouncementCardViewItem)
             itemType(::DayHeaderCardViewItem)
             itemType(::TopReadCardViewItem)
+            itemType(::InTheNewsCardViewItem)
         }
     )
-
 }
 

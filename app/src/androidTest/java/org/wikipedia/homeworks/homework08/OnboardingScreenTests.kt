@@ -40,7 +40,7 @@ class OnboardingScreenTests : TestCase() {
         run {
             step("Check that title has correct text") {
                 OnboardingScreen.slider.childAt<OnboardingPagerFirstItem>(0) {
-                    title.hasText("The Free Encyclopedia")
+                    title.hasText("The Free Encyclopedia\n…in over 300 languages")
                 }
             }
         }
