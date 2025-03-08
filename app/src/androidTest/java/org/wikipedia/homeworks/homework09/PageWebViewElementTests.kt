@@ -17,9 +17,7 @@ class PageWebViewElementTests : TestCase() {
     @Test
     fun checkPageWebViewElementIsVisible() = run {
         step("Skip onboarding") {
-            OnboardingScreen {
-                skipButton.click()
-            }
+            OnboardingScreen.skipButton.click()
         }
 
         step("Find and click on the third news item") {
