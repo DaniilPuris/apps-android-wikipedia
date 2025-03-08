@@ -131,8 +131,7 @@ class OnboardingUiAutomatorTest2 : TestCase() {
             step("Проверка, что текущая активность — MainActivity") {
                 val packageName = context.packageName
 
-                assertTrue(
-                    "Приложение должно быть на переднем плане",
+                assertTrue("Приложение должно быть на переднем плане",
                     device.currentPackageName == packageName
                 )
 
