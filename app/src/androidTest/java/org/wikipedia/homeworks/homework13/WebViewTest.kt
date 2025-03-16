@@ -1,5 +1,6 @@
 package org.wikipedia.homeworks.homework13
 
+import androidx.core.content.res.TypedArrayUtils.hasAttribute
 import androidx.test.espresso.web.webdriver.Locator
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import com.kaspersky.kaspresso.testcases.api.testcase.TestCase
@@ -39,6 +40,12 @@ class WebViewTest: TestCase() {
                         withElement(Locator.XPATH, "//span[@id='References']") {
                             scroll()
                             hasText("References")
+                        }
+                        
+                        withElement(Locator.XPATH, "//a[contains(@class, 'pcs-ref-back-link') and contains(text(), '[5]')]") {
+                            scroll()
+                            hasAttribute("id", "back_link_cite_note-OBrien-5")
+                            click()
                         }
                     }
                 }
