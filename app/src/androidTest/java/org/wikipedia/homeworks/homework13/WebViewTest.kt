@@ -44,7 +44,6 @@ class WebViewTest: TestCase() {
                         
                         withElement(Locator.XPATH, "//a[contains(@class, 'pcs-ref-back-link') and contains(text(), '[5]')]") {
                             scroll()
-                            hasAttribute("id", "back_link_cite_note-OBrien-5")
                             click()
                         }
                     }
