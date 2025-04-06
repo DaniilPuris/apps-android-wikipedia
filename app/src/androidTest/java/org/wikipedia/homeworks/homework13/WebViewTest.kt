@@ -1,14 +1,12 @@
 package org.wikipedia.homeworks.homework13
 
-import androidx.core.content.res.TypedArrayUtils.hasAttribute
 import androidx.test.espresso.web.webdriver.Locator
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import com.kaspersky.kaspresso.testcases.api.testcase.TestCase
-import io.github.kakaocup.kakao.web.WebElementBuilder
 import org.junit.Rule
 import org.junit.Test
 import org.wikipedia.homeworks.homework07.ExploreScreen
-import org.wikipedia.homeworks.homework07.SearchCardViewItem
+import org.wikipedia.homeworks.homework07.TopReadViewItem
 import org.wikipedia.homeworks.homework08.OnboardingScreen
 import org.wikipedia.main.MainActivity
 
@@ -25,10 +23,11 @@ class WebViewTest: TestCase() {
             }
             
             step("Переходим в произвольную статью") {
-                ExploreScreen.items.childWith<SearchCardViewItem> {
-                    withDescendant { withText("Featured article") }
-                }.perform {
-                    click()
+                Thread.sleep(1000)
+                
+                ExploreScreen.items.firstChild<TopReadViewItem> {
+                    isVisible()
+                    cardTopReadTitleTextView.click()
                 }
             }
             

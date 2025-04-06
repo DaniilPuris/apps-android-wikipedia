@@ -3,6 +3,8 @@ package org.wikipedia.homeworks.homework07
 import com.kaspersky.kaspresso.screens.KScreen
 import io.github.kakaocup.kakao.image.KImageView
 import io.github.kakaocup.kakao.recycler.KRecyclerView
+import io.github.kakaocup.kakao.text.KButton
+import io.github.kakaocup.kakao.text.KTextView
 import org.wikipedia.R
 import org.wikipedia.feed.view.FeedView
 import org.wikipedia.homeworks.homework09.InTheNewsCardViewItem
@@ -24,6 +26,7 @@ object ExploreScreen : KScreen<ExploreScreen>() {
             itemType(::AnnouncementCardViewItem)
             itemType(::DayHeaderCardViewItem)
             itemType(::TopReadCardViewItem)
+            itemType(::TopReadViewItem)  
             itemType(::InTheNewsCardViewItem)
         }
     )
