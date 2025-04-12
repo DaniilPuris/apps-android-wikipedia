@@ -6,7 +6,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.wikipedia.main.MainActivity
 
-class OnboardingUiAutomatorTest : TestCase() {
+class OnboardingUiAutomatorTests : TestCase() {
 
     @get:Rule
     val activityScenarioRule = ActivityScenarioRule(MainActivity::class.java)
