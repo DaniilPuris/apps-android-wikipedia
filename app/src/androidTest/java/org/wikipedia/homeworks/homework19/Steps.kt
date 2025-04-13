@@ -18,33 +18,33 @@ class Steps(private val testContext: TestContext<*>) {
         function()
     }
 
-    fun disableNetwork(device: Device) {
+    fun disableNetwork() {
         execute("Отключает сетевое соединение") {
-            device.network.disable()
+            testContext.device.network.disable()
         }
     }
     
-    fun enableNetwork(device: Device) {
+    fun enableNetwork() {
         execute("Включает сетевое соединение") {
-            device.network.enable()
+            testContext.device.network.enable()
         }
     }
 
-    fun setOrientationLeft(device: Device) {
+    fun setOrientationLeft() {
         execute("Устанавливает ориентацию экрана влево") {
-            device.setOrientationLeft()
+            testContext.device.setOrientationLeft()
         }
     }
     
-    fun setOrientationRight(device: Device) {
+    fun setOrientationRight() {
         execute("Устанавливает ориентацию экрана вправо") {
-            device.setOrientationRight()
+            testContext.device.setOrientationRight()
         }
     }
     
-    fun setOrientationNatural(device: Device) {
+    fun setOrientationNatural() {
         execute("Возвращает естественную ориентацию экрана") {
-            device.setOrientationNatural()
+            testContext.device.setOrientationNatural()
         }
     }
 
